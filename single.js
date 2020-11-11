@@ -1,8 +1,9 @@
 let instance;
 
 class SingleTon {
-  static initialize() {
+  static initialize(initialValue) {
     instance = new SingleTon();
+    instance.set(initialValue);
   }
 
   static getInstance() {
@@ -12,6 +13,7 @@ class SingleTon {
   set(v) {
     this.value = v;
   }
+
   get() {
     return this.value;
   }
